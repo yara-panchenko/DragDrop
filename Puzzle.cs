@@ -26,9 +26,13 @@ namespace DragDrop
         int picturebox5Y = 0;
         int X, Y, dX, dY;
         Point MouseDownLocation;
+        Random random;
+        int rndLocation;
         public Puzzle()
         {
             InitializeComponent();
+            Random random = new Random();
+            rndLocation = random.Next(1, 5);
         }        
 
         private void Puzzle_Load(object sender, EventArgs e)
@@ -41,16 +45,44 @@ namespace DragDrop
             button1.Visible = false;
             pictureBox1.Visible = false;
             pictureBox2.Size= new System.Drawing.Size(313, 313);
-            pictureBox2.Location =new Point (0, 0);
+            if (rndLocation == 1)
+            {
+                pictureBox2.Location= new Point(0, 0);
+                pictureBox3.Location = new Point(313, 0);
+                pictureBox4.Location = new Point(0, 313);
+                pictureBox5.Location = new Point(313, 313);
+            }
+            else if (rndLocation == 2)
+            {
+                pictureBox2.Location = new Point(313, 0);
+                pictureBox3.Location = new Point(0, 313);
+                pictureBox4.Location = new Point(0, 0);
+                pictureBox5.Location = new Point(313, 313);
+            }
+            else if (rndLocation == 3)
+            {
+                pictureBox2.Location = new Point(0, 313);
+                pictureBox3.Location = new Point(0, 0);
+                pictureBox4.Location = new Point(313, 313);
+                pictureBox5.Location = new Point(313, 0);
+            }
+            else if (rndLocation == 4)
+            {
+                pictureBox2.Location = new Point(313, 313);
+                pictureBox3.Location = new Point(313, 0);
+                pictureBox4.Location = new Point(0, 313);
+                pictureBox5.Location = new Point(0, 0);
+            }
+            //pictureBox2.Location =new Point (0, 0);
             pictureBox2.Visible = true;
             pictureBox3.Size = new System.Drawing.Size(313, 313);
-            pictureBox3.Location = new Point(313, 0);
+            //pictureBox3.Location = new Point(313, 0);
             pictureBox3.Visible = true;
             pictureBox4.Size = new System.Drawing.Size(313, 313);
-            pictureBox4.Location = new Point(0, 313);
+            //pictureBox4.Location = new Point(0, 313);
             pictureBox4.Visible = true;
             pictureBox5.Size = new System.Drawing.Size(313, 313);
-            pictureBox5.Location = new Point(313, 313);
+            //pictureBox5.Location = new Point(313, 313);
             pictureBox5.Visible = true;
             label1.Visible = true;
         }
@@ -69,9 +101,10 @@ namespace DragDrop
             {
                 pictureBox2.Left = e.X + pictureBox2.Left - MouseDownLocation.X;
                 pictureBox2.Top = e.Y + pictureBox2.Top - MouseDownLocation.Y;
+
             }
         }
-
+        
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
