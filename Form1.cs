@@ -12,9 +12,6 @@ namespace DragDrop
 {
     public partial class Form1 : Form
     {
-        Graphics g;
-        SolidBrush blueBrush = new SolidBrush(Color.Blue);
-        //Graphics g = e.Graphics;
         Pen e = new Pen(Brushes.Black, 2);
         Rectangle Rectangle = new Rectangle(10, 10, 200, 200);
         Rectangle Circle = new Rectangle(220, 10, 150, 150);

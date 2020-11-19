@@ -25,6 +25,7 @@ namespace DragDrop
         int picturebox5X = 0;
         int picturebox5Y = 0;
         int X, Y, dX, dY;
+        Point MouseDownLocation;
         public Puzzle()
         {
             InitializeComponent();
@@ -32,13 +33,8 @@ namespace DragDrop
 
         private void Puzzle_Load(object sender, EventArgs e)
         {
-            ControlExtension.Draggable(button1, true);
-            ControlExtension.Draggable(pictureBox1, true);
-            ControlExtension.Draggable(pictureBox2, true);
-            ControlExtension.Draggable(pictureBox3, true);
-            ControlExtension.Draggable(pictureBox4, true);
-            ControlExtension.Draggable(pictureBox5, true);
-        }       
+        }  
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,57 +52,112 @@ namespace DragDrop
             pictureBox5.Size = new System.Drawing.Size(313, 313);
             pictureBox5.Location = new Point(313, 313);
             pictureBox5.Visible = true;
+            label1.Visible = true;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox2.Left = e.X + pictureBox2.Left - MouseDownLocation.X;
+                pictureBox2.Top = e.Y + pictureBox2.Top - MouseDownLocation.Y;
+            }
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+
+        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox3.Left = e.X + pictureBox3.Left - MouseDownLocation.X;
+                pictureBox3.Top = e.Y + pictureBox3.Top - MouseDownLocation.Y;
+            }
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox4.Left = e.X + pictureBox4.Left - MouseDownLocation.X;
+                pictureBox4.Top = e.Y + pictureBox4.Top - MouseDownLocation.Y;
+            }
+        }
+
+        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                MouseDownLocation = e.Location;
+            }
+        }
+
+        private void pictureBox5_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBox5.Left = e.X + pictureBox5.Left - MouseDownLocation.X;
+                pictureBox5.Top = e.Y + pictureBox5.Top - MouseDownLocation.Y;
+            }
         }
 
         private void Puzzle_MouseDown(object sender, MouseEventArgs e)
         {
-            if ((e.X < pictureBox2.X + pictureBox2.Width) && (e.X > pictureBox2.X))
+            if (pictureBox2.Location == pictureBox6.Location && pictureBox3.Location == pictureBox8.Location &&
+                pictureBox4.Location == pictureBox7.Location && pictureBox5.Location == pictureBox9.Location)
             {
-                if ((e.Y < pictureBox2.Y + pictureBox2.Height) && (e.Y > pictureBox2.Y))
-                {
-                    pictureBox2Clicked = true;
-                    pictureBox2X = e.X - pictureBox2.X;
-                    pictureBox2Y = e.Y - pictureBox2.Y;
-                }
+                pictureBox6.SendToBack();
+                pictureBox7.SendToBack();
+                pictureBox8.SendToBack();
+                pictureBox9.SendToBack();
+                MessageBox.Show("Пазл собран!");
             }
-            if ((e.X < pictureBox3.X + pictureBox3.Width) && (e.X > pictureBox3.X))
+            else
             {
-                if ((e.Y < pictureBox3.Y + pictureBox3.Height) && (e.Y > pictureBox3.Y))
-                {
-                    pictureBox3Clicked = true;
-                    pictureBox3X = e.X - pictureBox3.X;
-                    pictureBox3Y = e.Y - pictureBox3.Y;
-                }
-            }
-            if ((e.X < pictureBox4.X + pictureBox4.Width) && (e.X > pictureBox4.X))
-            {
-                if ((e.Y < pictureBox4.Y + pictureBox4.Height) && (e.Y > pictureBox4.Y))
-                {
-                    pictureBox4Clicked = true;
-                    pictureBox4X = e.X - pictureBox4.X;
-                    pictureBox4Y = e.Y - pictureBox4.Y;
-                }
-            }
-            if ((e.X < pictureBox5.X + pictureBox5.Width) && (e.X > pictureBox5.X))
-            {
-                if ((e.Y < pictureBox5.Y + pictureBox5.Height) && (e.Y > pictureBox5.Y))
-                {
-                    pictureBox5Clicked = true;
-                    pictureBox5X = e.X - pictureBox5.X;
-                    pictureBox5Y = e.Y - pictureBox5.Y;
-                }
+
             }
         }
         private void Puzzle_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox2Clicked = false;
-            pictureBox3Clicked = false;
-            pictureBox4Clicked = false;
-            pictureBox5Clicked = false;
+            if (pictureBox2.Location==pictureBox6.Location && pictureBox3.Location == pictureBox8.Location && 
+                pictureBox4.Location==pictureBox7.Location && pictureBox5.Location==pictureBox9.Location)
+            {
+                pictureBox6.SendToBack();
+                pictureBox7.SendToBack();
+                pictureBox8.SendToBack();
+                pictureBox9.SendToBack();
+                MessageBox.Show("Пазл собран!");
+            }
+            else
+            {
+                
+                label1.Text="Продолжайте собирать пазл";
+            }
         }
         private void Puzzle_MouseMove(object sender, MouseEventArgs e)
         {
-
         }
 
     }
