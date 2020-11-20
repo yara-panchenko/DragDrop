@@ -26,8 +26,8 @@ namespace DragDrop
         int picturebox5Y = 0;
         int X, Y, dX, dY;
         Point MouseDownLocation;
-        Random random;
         int rndLocation;
+        Random random;        
         public Puzzle()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace DragDrop
 
         private void Puzzle_Load(object sender, EventArgs e)
         {
+
         }  
         
 
@@ -73,20 +74,17 @@ namespace DragDrop
                 pictureBox4.Location = new Point(0, 313);
                 pictureBox5.Location = new Point(0, 0);
             }
-            //pictureBox2.Location =new Point (0, 0);
             pictureBox2.Visible = true;
             pictureBox3.Size = new System.Drawing.Size(313, 313);
-            //pictureBox3.Location = new Point(313, 0);
             pictureBox3.Visible = true;
             pictureBox4.Size = new System.Drawing.Size(313, 313);
-            //pictureBox4.Location = new Point(0, 313);
             pictureBox4.Visible = true;
             pictureBox5.Size = new System.Drawing.Size(313, 313);
-            //pictureBox5.Location = new Point(313, 313);
             pictureBox5.Visible = true;
             label1.Visible = true;
+            button2.Visible = true;
         }
-
+        
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
@@ -101,10 +99,37 @@ namespace DragDrop
             {
                 pictureBox2.Left = e.X + pictureBox2.Left - MouseDownLocation.X;
                 pictureBox2.Top = e.Y + pictureBox2.Top - MouseDownLocation.Y;
-
+            }
+            if (e.X == pictureBox6.Location.X)
+            {
+                if (e.Y == pictureBox6.Location.Y)
+                {
+                    pictureBox2.Location = pictureBox6.Location;
+                }
+            }
+            if (e.X == pictureBox7.Location.X)
+            {
+                if (e.Y == pictureBox7.Location.Y)
+                {
+                    pictureBox2.Location = pictureBox7.Location;
+                }
+            }
+            if (e.X == pictureBox8.Location.X)
+            {
+                if (e.Y == pictureBox8.Location.Y)
+                {
+                    pictureBox2.Location = pictureBox8.Location;
+                }
+            }
+            if (e.X == pictureBox9.Location.X)
+            {
+                if (e.Y == pictureBox9.Location.Y)
+                {
+                    pictureBox2.Location = pictureBox9.Location;
+                }
             }
         }
-        
+            
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
@@ -156,6 +181,38 @@ namespace DragDrop
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (rndLocation == 1)
+            {
+                pictureBox2.Location = new Point(0, 0);
+                pictureBox3.Location = new Point(313, 0);
+                pictureBox4.Location = new Point(0, 313);
+                pictureBox5.Location = new Point(313, 313);
+            }
+            else if (rndLocation == 2)
+            {
+                pictureBox2.Location = new Point(313, 0);
+                pictureBox3.Location = new Point(0, 313);
+                pictureBox4.Location = new Point(0, 0);
+                pictureBox5.Location = new Point(313, 313);
+            }
+            else if (rndLocation == 3)
+            {
+                pictureBox2.Location = new Point(0, 313);
+                pictureBox3.Location = new Point(0, 0);
+                pictureBox4.Location = new Point(313, 313);
+                pictureBox5.Location = new Point(313, 0);
+            }
+            else if (rndLocation == 4)
+            {
+                pictureBox2.Location = new Point(313, 313);
+                pictureBox3.Location = new Point(313, 0);
+                pictureBox4.Location = new Point(0, 313);
+                pictureBox5.Location = new Point(0, 0);
+            }
+        }
+
         private void Puzzle_MouseDown(object sender, MouseEventArgs e)
         {
             if (pictureBox2.Location == pictureBox6.Location && pictureBox3.Location == pictureBox8.Location &&
@@ -166,6 +223,7 @@ namespace DragDrop
                 pictureBox8.SendToBack();
                 pictureBox9.SendToBack();
                 MessageBox.Show("Пазл собран!");
+                label1.Text = "Вы молодец!";
             }
             else
             {
@@ -174,24 +232,34 @@ namespace DragDrop
         }
         private void Puzzle_MouseUp(object sender, MouseEventArgs e)
         {
-            if (pictureBox2.Location==pictureBox6.Location && pictureBox3.Location == pictureBox8.Location && 
-                pictureBox4.Location==pictureBox7.Location && pictureBox5.Location==pictureBox9.Location)
-            {
-                pictureBox6.SendToBack();
-                pictureBox7.SendToBack();
-                pictureBox8.SendToBack();
-                pictureBox9.SendToBack();
-                MessageBox.Show("Пазл собран!");
-            }
-            else
-            {
-                
-                label1.Text="Продолжайте собирать пазл";
-            }
         }
         private void Puzzle_MouseMove(object sender, MouseEventArgs e)
         {
+            if (pictureBox2.Location == pictureBox6.Location && pictureBox3.Location == pictureBox8.Location &&
+                pictureBox4.Location == pictureBox7.Location && pictureBox5.Location == pictureBox9.Location)
+            {
+                label1.Text = "Вы молодец!";
+            }
+            //if (pictureBox2Clicked)
+            //{
+            //    pictureBox2.X = e.X - picturebox2X;
+            //    pictureBox2.Y = e.Y - picturebox2Y;
+            //}
+            //if (pictureBox3Clicked)
+            //{
+            //    pictureBox3.X = e.X - picturebox3X;
+            //    pictureBox3.Y = e.Y - picturebox3Y;
+            //}
+            //if (pictureBox4Clicked)
+            //{
+            //    pictureBox4.X = e.X - picturebox4X;
+            //    pictureBox4.Y = e.Y - picturebox4Y;
+            //}
+            //if (pictureBox5Clicked)
+            //{
+            //    pictureBox5.X = e.X - picturebox5X;
+            //    pictureBox5.Y = e.Y - picturebox5Y;
+            //}
         }
-
     }
 }

@@ -27,7 +27,6 @@ namespace DragDrop
         int SquareY = 0;
         int X, Y, dX, dY;
         int LastClicked = 0;
-
         public Form1()
         {
             InitializeComponent();
