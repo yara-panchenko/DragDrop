@@ -63,7 +63,6 @@ namespace DragDrop
 
         private void Puzzle_Load(object sender, EventArgs e)
         {
-            
         }  
         
 
@@ -259,9 +258,102 @@ namespace DragDrop
         }
         private void Puzzle_MouseUp(object sender, MouseEventArgs e)
         {
+            //if pictureBox2.Location==pictureBox6.Location
         }
         private void Puzzle_MouseMove(object sender, MouseEventArgs e)
         {
+            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
+                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
+            {
+                if (pictureBox2.MouseDown)
+                {
+                    pictureBox2.Location = pictureBox6.Location;
+                }
+                else if (pictureBox3.MouseDown)
+                {
+                    pictureBox3.Location = pictureBox6.Location;
+                }
+                else if (pictureBox4.MouseDown)
+                {
+                    pictureBox4.Location = pictureBox6.Location;
+                }
+                if (pictureBox5.MouseDown)
+                {
+                    pictureBox5.Location = pictureBox6.Location;
+                }
+            }
+
+            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
+                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
+            {
+                if (pictureBox2.MouseDown)
+                {
+                    pictureBox2.Location = pictureBox7.Location;
+                }
+                else if (pictureBox3.MouseDown)
+                {
+                    pictureBox3.Location = pictureBox7.Location;
+                }
+                else if (pictureBox4.MouseDown)
+                {
+                    pictureBox4.Location = pictureBox7.Location;
+                }
+                if (pictureBox5.MouseDown)
+                {
+                    pictureBox5.Location = pictureBox7.Location;
+                }
+            }
+            if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
+                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
+            {
+                if (pictureBox2.MouseDown)
+                {
+                    pictureBox2.Location = pictureBox8.Location;
+                }
+                else if (pictureBox3.MouseDown)
+                {
+                    pictureBox3.Location = pictureBox8.Location;
+                }
+                else if (pictureBox4.MouseDown)
+                {
+                    pictureBox4.Location = pictureBox8.Location;
+                }
+                if (pictureBox5.MouseDown)
+                {
+                    pictureBox5.Location = pictureBox8.Location;
+                }
+            }
+            if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
+                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
+            {
+                if (pictureBox2.MouseDown)
+                {
+                    pictureBox2.Location = pictureBox9.Location;
+                }
+                else if (pictureBox3.MouseDown)
+                {
+                    pictureBox3.Location = pictureBox9.Location;
+                }
+                else if (pictureBox4.MouseDown)
+                {
+                    pictureBox4.Location = pictureBox9.Location;
+                }
+                if (pictureBox5.MouseDown)
+                {
+                    pictureBox5.Location = pictureBox9.Location;
+                }
+            }
+
+
+
+
+            label2.Text = String.Format("({0},{1})", e.X, e.Y);
+            label3.Text = String.Format("({0},{1})", pictureBox6.Location.X, pictureBox6.Location.Y);
+             
+            
+
+
+
             if (pictureBox2.Location == pictureBox6.Location && pictureBox3.Location == pictureBox8.Location &&
                 pictureBox4.Location == pictureBox7.Location && pictureBox5.Location == pictureBox9.Location)
             {
