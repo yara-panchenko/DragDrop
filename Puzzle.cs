@@ -26,23 +26,50 @@ namespace DragDrop
         int picturebox5Y = 0;
         int X, Y, dX, dY;
         Point MouseDownLocation;
-        int rndLocation;
-        Random random;        
+        int rndLocation, rndLocation2;
+        Random random, rnd;        
         public Puzzle()
         {
             InitializeComponent();
             Random random = new Random();
+            Random rnd = new Random();
             rndLocation = random.Next(1, 5);
+            rndLocation2 = rnd.Next(1, 4);
+            if (rndLocation2 == 1)
+            {
+                pictureBox1.Image = Properties.Resources.img1;
+                pictureBox2.Image = Properties.Resources.img11;
+                pictureBox3.Image = Properties.Resources.img12;
+                pictureBox4.Image = Properties.Resources.img13;
+                pictureBox5.Image = Properties.Resources.img14;
+            }
+            else if (rndLocation2 == 2)
+            {
+                pictureBox1.Image = Properties.Resources.img2;
+                pictureBox2.Image = Properties.Resources.img21;
+                pictureBox3.Image = Properties.Resources.img22;
+                pictureBox4.Image = Properties.Resources.img23;
+                pictureBox5.Image = Properties.Resources.img24;
+            }
+            else if (rndLocation2 == 3)
+            {
+                pictureBox1.Image = Properties.Resources.img3;
+                pictureBox2.Image = Properties.Resources.img31;
+                pictureBox3.Image = Properties.Resources.img32;
+                pictureBox4.Image = Properties.Resources.img33;
+                pictureBox5.Image = Properties.Resources.img34;
+            }
         }        
 
         private void Puzzle_Load(object sender, EventArgs e)
         {
-
+            
         }  
         
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             button1.Visible = false;
             pictureBox1.Visible = false;
             pictureBox2.Size= new System.Drawing.Size(313, 313);

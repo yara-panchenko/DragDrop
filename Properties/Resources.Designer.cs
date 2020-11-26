@@ -63,9 +63,9 @@ namespace DragDrop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1 {
+        internal static System.Drawing.Bitmap img1 {
             get {
-                object obj = ResourceManager.GetObject("_1", resourceCulture);
+                object obj = ResourceManager.GetObject("img1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace DragDrop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _11 {
+        internal static System.Drawing.Bitmap img11 {
             get {
-                object obj = ResourceManager.GetObject("_11", resourceCulture);
+                object obj = ResourceManager.GetObject("img11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace DragDrop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _12 {
+        internal static System.Drawing.Bitmap img12 {
             get {
-                object obj = ResourceManager.GetObject("_12", resourceCulture);
+                object obj = ResourceManager.GetObject("img12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace DragDrop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _13 {
+        internal static System.Drawing.Bitmap img13 {
             get {
-                object obj = ResourceManager.GetObject("_13", resourceCulture);
+                object obj = ResourceManager.GetObject("img13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,109 @@ namespace DragDrop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _14 {
+        internal static System.Drawing.Bitmap img14 {
             get {
-                object obj = ResourceManager.GetObject("_14", resourceCulture);
+                object obj = ResourceManager.GetObject("img14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img2 {
+            get {
+                object obj = ResourceManager.GetObject("img2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img21 {
+            get {
+                object obj = ResourceManager.GetObject("img21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img22 {
+            get {
+                object obj = ResourceManager.GetObject("img22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img23 {
+            get {
+                object obj = ResourceManager.GetObject("img23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img24 {
+            get {
+                object obj = ResourceManager.GetObject("img24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img3 {
+            get {
+                object obj = ResourceManager.GetObject("img3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img31 {
+            get {
+                object obj = ResourceManager.GetObject("img31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img32 {
+            get {
+                object obj = ResourceManager.GetObject("img32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img33 {
+            get {
+                object obj = ResourceManager.GetObject("img33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img34 {
+            get {
+                object obj = ResourceManager.GetObject("img34", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
