@@ -158,7 +158,7 @@ namespace DragDrop
          
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            LastClicked = 2;
+            //LastClicked = 2;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
@@ -167,7 +167,7 @@ namespace DragDrop
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
-            LastClicked = 2;
+            //LastClicked = 2;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox3.Left = e.X + pictureBox3.Left - MouseDownLocation.X;
@@ -177,7 +177,7 @@ namespace DragDrop
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            LastClicked = 3;
+            //LastClicked = 3;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
@@ -186,7 +186,7 @@ namespace DragDrop
 
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
-            LastClicked = 3;
+            //LastClicked = 3;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox4.Left = e.X + pictureBox4.Left - MouseDownLocation.X;
@@ -196,7 +196,7 @@ namespace DragDrop
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
-            LastClicked = 4;
+            //LastClicked = 4;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
@@ -215,15 +215,15 @@ namespace DragDrop
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox6.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox6.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox6.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
 
@@ -232,7 +232,7 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox7.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
@@ -240,11 +240,11 @@ namespace DragDrop
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox7.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox7.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
@@ -252,11 +252,11 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox8.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox8.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
@@ -264,7 +264,7 @@ namespace DragDrop
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox8.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
@@ -272,15 +272,15 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox9.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox9.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox9.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
@@ -301,15 +301,15 @@ namespace DragDrop
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox6.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox6.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox6.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
 
@@ -318,7 +318,7 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox7.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
@@ -326,11 +326,11 @@ namespace DragDrop
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox7.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox7.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
@@ -338,11 +338,11 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox8.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox8.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
@@ -350,7 +350,7 @@ namespace DragDrop
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox8.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
@@ -358,15 +358,15 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox9.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox9.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox9.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
@@ -387,15 +387,15 @@ namespace DragDrop
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox6.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox6.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox6.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
 
@@ -404,7 +404,7 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox7.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
@@ -412,11 +412,11 @@ namespace DragDrop
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox7.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox7.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
@@ -424,11 +424,11 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox8.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox8.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
@@ -436,7 +436,7 @@ namespace DragDrop
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox8.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
@@ -444,15 +444,15 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox9.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox9.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox9.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
@@ -473,15 +473,15 @@ namespace DragDrop
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox6.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox6.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox6.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
 
@@ -490,7 +490,7 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox7.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
@@ -498,11 +498,11 @@ namespace DragDrop
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox7.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox7.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
@@ -510,11 +510,11 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox8.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox8.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
@@ -522,7 +522,7 @@ namespace DragDrop
                 }
                 else if (LastClicked == 4)
                 {
-                    pictureBox5.Location = pictureBox8.Location;
+                    pictureBox5.Location = pictureBox9.Location;
                 }
             }
             else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
@@ -530,15 +530,15 @@ namespace DragDrop
             {
                 if (LastClicked == 1)
                 {
-                    pictureBox2.Location = pictureBox9.Location;
+                    pictureBox2.Location = pictureBox6.Location;
                 }
                 else if (LastClicked == 2)
                 {
-                    pictureBox3.Location = pictureBox9.Location;
+                    pictureBox3.Location = pictureBox7.Location;
                 }
                 else if (LastClicked == 3)
                 {
-                    pictureBox4.Location = pictureBox9.Location;
+                    pictureBox4.Location = pictureBox8.Location;
                 }
                 else if (LastClicked == 4)
                 {
