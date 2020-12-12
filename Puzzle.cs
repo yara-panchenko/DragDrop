@@ -120,45 +120,17 @@ namespace DragDrop
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
         {
-            LastClicked = 1;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox2.Left = e.X + pictureBox2.Left - MouseDownLocation.X;
                 pictureBox2.Top = e.Y + pictureBox2.Top - MouseDownLocation.Y;
             }
-            //if (e.X == pictureBox6.Location.X)
-            //{
-            //    if (e.Y == pictureBox6.Location.Y)
-            //    {
-            //        pictureBox2.Location = pictureBox6.Location;
-            //    }
-            //}
-            //if (e.X == pictureBox7.Location.X)
-            //{
-            //    if (e.Y == pictureBox7.Location.Y)
-            //    {
-            //        pictureBox2.Location = pictureBox7.Location;
-            //    }
-            //}
-            //if (e.X == pictureBox8.Location.X)
-            //{
-            //    if (e.Y == pictureBox8.Location.Y)
-            //    {
-            //        pictureBox2.Location = pictureBox8.Location;
-            //    }
-            //}
-            //if (e.X == pictureBox9.Location.X)
-            //{
-            //    if (e.Y == pictureBox9.Location.Y)
-            //    {
-            //        pictureBox2.Location = pictureBox9.Location;
-            //    }
-            //}
+           
         }
          
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            //LastClicked = 2;
+            LastClicked = 2;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
@@ -167,7 +139,6 @@ namespace DragDrop
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
-            //LastClicked = 2;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox3.Left = e.X + pictureBox3.Left - MouseDownLocation.X;
@@ -177,7 +148,7 @@ namespace DragDrop
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            //LastClicked = 3;
+            LastClicked = 3;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
@@ -186,7 +157,6 @@ namespace DragDrop
 
         private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
         {
-            //LastClicked = 3;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox4.Left = e.X + pictureBox4.Left - MouseDownLocation.X;
@@ -196,367 +166,123 @@ namespace DragDrop
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
-            //LastClicked = 4;
+            LastClicked = 4;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 MouseDownLocation = e.Location;
             }
         }
-
-        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
-        {
-            LastClicked = 1;
-            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-
-            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-        }
-
-        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
-        {
-            LastClicked = 2;
-            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-
-            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-        }
-
-        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
-        {
-            LastClicked = 3;
-            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-
-            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-        }
-
-        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
-        {
-            LastClicked = 4;
-            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-
-            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            {
-                if (LastClicked == 1)
-                {
-                    pictureBox2.Location = pictureBox6.Location;
-                }
-                else if (LastClicked == 2)
-                {
-                    pictureBox3.Location = pictureBox7.Location;
-                }
-                else if (LastClicked == 3)
-                {
-                    pictureBox4.Location = pictureBox8.Location;
-                }
-                else if (LastClicked == 4)
-                {
-                    pictureBox5.Location = pictureBox9.Location;
-                }
-            }
-            label4.Text = Convert.ToString(LastClicked);
-        }
-
         private void pictureBox5_MouseMove(object sender, MouseEventArgs e)
         {
-            LastClicked = 4;
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
                 pictureBox5.Left = e.X + pictureBox5.Left - MouseDownLocation.X;
                 pictureBox5.Top = e.Y + pictureBox5.Top - MouseDownLocation.Y;
             }
         }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
+                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
+            {
+                pictureBox2.Location = pictureBox6.Location;
+            }
+
+            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
+                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
+            {
+                pictureBox2.Location = pictureBox7.Location;
+            }
+            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
+                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
+            {
+                pictureBox2.Location = pictureBox8.Location;
+            }
+            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
+                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
+            {
+                pictureBox2.Location = pictureBox9.Location;
+            }
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
+                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
+            {
+                pictureBox3.Location = pictureBox6.Location;
+            }
+
+            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
+                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
+            {
+                pictureBox3.Location = pictureBox7.Location;
+            }
+            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
+                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
+            {
+                pictureBox3.Location = pictureBox8.Location;
+            }
+            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
+                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
+            {
+                pictureBox3.Location = pictureBox9.Location;
+            }
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
+                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
+            {
+                pictureBox4.Location = pictureBox6.Location;
+            }
+
+            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
+                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
+            {
+                pictureBox4.Location = pictureBox7.Location;
+            }
+            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
+                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
+            {
+                pictureBox4.Location = pictureBox8.Location;
+            }
+            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
+                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
+            {
+                pictureBox4.Location = pictureBox9.Location;
+            }
+        }
+
+        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
+                pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
+            {
+                pictureBox5.Location = pictureBox6.Location;
+            }
+
+            else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
+                pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
+            {
+                pictureBox5.Location = pictureBox7.Location;
+            }
+            else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
+                pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
+            {
+                pictureBox5.Location = pictureBox8.Location;
+            }
+            else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
+                pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
+            {
+                pictureBox5.Location = pictureBox9.Location;
+            }
+            label4.Text = Convert.ToString(LastClicked);
+        }
+
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -609,263 +335,27 @@ namespace DragDrop
         }
         private void Puzzle_MouseUp(object sender, MouseEventArgs e)
         {
-            //if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-            //    pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox6.Location;
-            //    }
-            //}
-
-            //else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-            //    pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox7.Location;
-            //    }
-            //}
-            //else if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-            //    pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox8.Location;
-            //    }
-            //}
-            //else if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-            //    pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox9.Location;
-            //    }
-            //}
+            
         }
         private void PictureBox6_MouseUp(object sender, MouseEventArgs e)
         {
-            //if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-            //    pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox6.Location;
-            //    }
-            //}
+            
         }
         private void PictureBox7_MouseUp(object sender, MouseEventArgs e)
         {
-            //if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-            //    pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox7.Location;
-            //    }
-            //}
+            
         }
         private void PictureBox8_MouseUp(object sender, MouseEventArgs e)
         {
-            //if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-            //    pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox8.Location;
-            //    }
-            //}
+            
         }
         private void PictureBox9_MouseUp(object sender, MouseEventArgs e)
         {
-            //if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-            //    pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox9.Location;
-            //    }
-            //}
+            
         }
         private void Puzzle_MouseMove(object sender, MouseEventArgs e)
         {           
-            //if (pictureBox6.Location.X - e.X < 200 && pictureBox6.Location.Y - e.Y < 200 ||
-            //    pictureBox6.Location.X - e.X > 200 && pictureBox6.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox6.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox6.Location;
-            //    }
-            //    if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox6.Location;
-            //    }
-            //}
-
-            //else if (pictureBox7.Location.X - e.X < 200 && pictureBox7.Location.Y - e.Y < 200 ||
-            //    pictureBox7.Location.X - e.X > 200 && pictureBox7.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox7.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox7.Location;
-            //    }
-            //    if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox7.Location;
-            //    }
-            //}
-            //if (pictureBox8.Location.X - e.X < 200 && pictureBox8.Location.Y - e.Y < 200 ||
-            //    pictureBox8.Location.X - e.X > 200 && pictureBox8.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox8.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox8.Location;
-            //    }
-            //    if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox8.Location;
-            //    }
-            //}
-            //if (pictureBox9.Location.X - e.X < 200 && pictureBox9.Location.Y - e.Y < 200 ||
-            //    pictureBox9.Location.X - e.X > 200 && pictureBox9.Location.Y - e.Y > 200)
-            //{
-            //    if (LastClicked == 1)
-            //    {
-            //        pictureBox2.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 2)
-            //    {
-            //        pictureBox3.Location = pictureBox9.Location;
-            //    }
-            //    else if (LastClicked == 3)
-            //    {
-            //        pictureBox4.Location = pictureBox9.Location;
-            //    }
-            //    if (LastClicked == 4)
-            //    {
-            //        pictureBox5.Location = pictureBox9.Location;
-            //    }
-            //}
+            
             label2.Text = String.Format("({0},{1})", e.X, e.Y);
             label3.Text = String.Format("({0},{1})", pictureBox6.Location.X, pictureBox6.Location.Y);         
             if (pictureBox2.Location == pictureBox6.Location && pictureBox3.Location == pictureBox8.Location &&
